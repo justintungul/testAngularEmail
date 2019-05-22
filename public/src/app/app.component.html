@@ -1,0 +1,17 @@
+<div class="container py-5">
+  <form (submit)="sendEmail()">
+    <div class="form-group">
+      <label>Email address</label>
+      <input type="email" class="form-control" placeholder="Enter email" [(ngModel)]="emailInfo.send_to" name="send_to">
+    </div>
+    <div class="form-group">
+      <label>Subject</label>
+      <input type="text" class="form-control" placeholder="Subject" [(ngModel)]="emailInfo.subject" name="subject">
+    </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea class="form-control" rows="3" [(ngModel)]="emailInfo.content" name="content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
